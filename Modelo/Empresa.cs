@@ -5,14 +5,14 @@
         public int Id { get; set; }
         public string Nome { get; set; }
         public string Cnpj { get; set; }
-        public Carga Cargas { get;set; }
+        public IEnumerable<Carga> Cargas { get; set; }
 
-        public Empresa(int id, string nome, string cnpj, Carga cargas)
-        {
-            Id = id;
-            Nome = nome;
-            Cnpj = cnpj;
-            Cargas = cargas;
-        }
+        //public Empresa(int id, string nome, string cnpj, Carga cargas)
+        //{
+        //    Id = id;
+        //    Nome = nome;
+        //    Cnpj = cnpj;
+        //    Cargas = cargas;
+        //}
     }
 }

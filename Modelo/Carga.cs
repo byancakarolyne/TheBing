@@ -3,26 +3,26 @@
     public class Carga
     {
         public int IdEmpresa { get; set; }
-        public string CnpjEmpresa { get; set; }
-        public string NomeEmpresa { get; set; }
-        public int IdCarga { get; set; }
-        public string NomeCarga { get; set; }
-        public string DescricaoCarga { get; set; }
-        public string Origem { get; set; }
-        public string Destino { get; set; }
-        public string Status { get; set; }
-        public int IdStatus { get; set; }
-
-        //public int Id { get; set; }
-        //public string Nome { get; set; }
-
-        //public string Descricao { get; set; }
-
+        //public string CnpjEmpresa { get; set; }
+        //public string NomeEmpresa { get; set; }
+        //public int IdCarga { get; set; }
+        //public string NomeCarga { get; set; }
+        //public string DescricaoCarga { get; set; }
+        //public string Origem { get; set; }
         //public string Destino { get; set; }
+        //public string Status { get; set; }
+        //public int IdStatus { get; set; }
 
-        //public bool Flag { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
 
-        //public string IdEmpresa { get; set; }
+        public string Descricao { get; set; }
+
+        public string Origem { get; set; }
+
+        public string Destino { get; set; }
+
+        public IEnumerable<CargaStatus> CargasStatus { get; set; }
 
         //public CargaStatus StatusCarga { get; set; }
 
