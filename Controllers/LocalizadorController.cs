@@ -18,10 +18,9 @@ namespace Looking42.Controllers
                     c.id_carga, c.nome_carga, c.descricao_carga, c.origem, c.destino, --carga
                     s.status, s.id_status, st.id_carga-- status
                     FROM carga c
-                    JOIN empresa e ON e.id_empresa = c.id_empresa
-                    JOIN carga_status st ON st.id_carga = c.id_carga
-                    JOIN[status] s ON s.id_status = st.id_status
-                    WHERE e.Cnpj = '{cnpj}'
+                    INNER JOIN empresa e ON e.id_empresa = c.id_empresa
+                    INNER JOIN carga_status st ON st.id_carga = c.id_carga
+                    INNER JOIN [status] s ON s.id_status = st.id_status                    
                 ";
                 var conn = "Data Source=bing.cn1hoce5ecsw.sa-east-1.rds.amazonaws.com;User Id=admin;Password=bing2022;Initial Catalog=bing";
                 var connection = new SqlConnection(conn);
